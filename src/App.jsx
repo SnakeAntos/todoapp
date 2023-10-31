@@ -5,7 +5,11 @@ import Footer from "./components/footer";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
+
+
 function App() {
+  
+  
   
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const [filterOption, setFilterOption] = useState("all");

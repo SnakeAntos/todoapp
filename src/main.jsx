@@ -7,6 +7,7 @@ import {
 import App from './App';
 import Landing from './components/landing';
 
+
 const router = createBrowserRouter([
   {
     path: "/",

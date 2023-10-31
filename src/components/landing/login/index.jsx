@@ -4,6 +4,8 @@ import "./index.css";
 import { MagicMotion } from "react-magic-motion";
 
 function Login({navigateRegister}) {
+  const url = process.env.REACT_APP_API_URL
+  console.log("esta es la variable",url)
   const [formData, setFormData] = useState({ email: "", password: "" });
   let [loginSuccess, setLoginSuccess] = useState(false);
   const navigate = useNavigate();
@@ -12,10 +14,10 @@ function Login({navigateRegister}) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  // http://localhost:3001
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3001/auth/login", {
+    fetch(`${url}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
