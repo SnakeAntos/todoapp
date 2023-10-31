@@ -1,0 +1,6 @@
+.register-container{
+    margin-top: 5%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,27 @@
+.buttonholder-container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.buttonholder-container_inner{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 270px;
+}
+.buttonholder-btn_container{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+.buttonholder-text{
+  font-family: "Roboto Serif", serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.buttonholder-text_light{
+    color: black;
+}
+.buttonholder-text_dark{
+    color: lavender;
+}

@@ -1,0 +1,22 @@
+.filterBTN-btn{
+    border: none;
+    border-radius: 6px;
+    padding: 3px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50px;
+}
+
+.filter_btn_dark {
+    background-color: #698bbd;
+    color: #3a3a3a;
+  }
+.filter_btn_light {
+    background-color: #2e4e6b;
+    color: #ffffff;
+  }
+  .filterbtn-active {
+    background-color: #b752c0;
+    color: #ffffff;
+  }
