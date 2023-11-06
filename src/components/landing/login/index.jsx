@@ -83,7 +83,7 @@ function Login({navigateRegister}) {
             />
           </div>
           <div class="btn">
-            <button class="button1">
+            <button type="submit" class="button1">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ingresar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </button>
             <button class="button2" onClick={navigateRegister}>Registrarse</button>
