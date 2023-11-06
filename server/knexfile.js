@@ -1,11 +1,12 @@
+require("dotenv").config();
 module.exports = {
     development: {
-      client: "pg",
+      client:  process.env.DB_DRIVER || 'pg',
       connection: {
-        host: "localhost",
-        user: "postgres",
-        password: "postgreskeeper",
-        database: "Sprint8sample1",
+        host: process.env.DB_HOST || "localhost",
+        user: process.env.DB_USER || "postgres",
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME || "Sprint8sample1",
       },
     },
   };
