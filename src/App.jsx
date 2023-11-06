@@ -7,10 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function App() {
-  
-  
-  
+function App() {  
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const [filterOption, setFilterOption] = useState("all");
   const [tasks, setTasks] = useState([]);
@@ -19,6 +16,7 @@ function App() {
   const userToken = localStorage.getItem("token");
   const [taskCreationFlag, setTaskCreationFlag] = useState(false);
   const navigate = useNavigate();
+  const url = process.env.REACT_APP_API_URL
 
   const handleFilterChange = (option) => {
     setFilterOption(option);
@@ -72,7 +70,7 @@ function App() {
 
     if (user) {
       // Realizar la solicitud GET a tu endpoint de tareas aquí
-      fetch(`http://localhost:3001/allTasksForUser`, {
+      fetch(`${url}/allTasksForUser`, {
         headers: {
           authorization: ` ${userToken}`, // Incluye el token de autenticación
         },
@@ -91,7 +89,7 @@ function App() {
 
   const addTask = (title, priority) => {
     const newTask = { title: title, priority_id: priority };
-    fetch("http://localhost:3001/create", {
+    fetch(`${url}/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -111,7 +109,7 @@ function App() {
 
   const deleteTask = (taskId) => {
     // Realiza una solicitud DELETE al endpoint de eliminación de tareas
-    fetch(`http://localhost:3001/deletetask`, {
+    fetch(`${url}/deletetask`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

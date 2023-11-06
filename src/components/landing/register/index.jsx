@@ -6,6 +6,7 @@ import { MagicMotion } from 'react-magic-motion';
 function Register({navigateLogin}) {
   const [formData, setFormData] = useState({ email: '', password: '', nick_name:'' });
   const navigate = useNavigate();
+  const url = process.env.REACT_APP_API_URL
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -14,7 +15,7 @@ function Register({navigateLogin}) {
   const handleSubmit = (e) => {    e.preventDefault();
 
     // Realiza una solicitud POST al servidor para registrar un nuevo usuario
-    fetch('http://localhost:3001/auth/register', {
+    fetch(`${url}/auth/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
