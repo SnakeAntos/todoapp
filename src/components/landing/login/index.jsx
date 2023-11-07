@@ -83,7 +83,7 @@ function Login({navigateRegister}) {
             />
           </div>
           <div class="btn">
-            <button type="submit" onTouchEnd={handleSubmit} class="button1">
+            <button type="submit" data-action="submit" class="button1">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ingresar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </button>
             <button class="button2" onClick={navigateRegister}>Registrarse</button>
